@@ -6,8 +6,13 @@ class Productos extends BaseController
 {/* ahora se define una funcion regularmente tiene que ser publica para que se pueda acceder desde la url */
     public function index () 
     {
-        echo '<h1> Controller Productos</h1>';
-        print_r($this->session); /* este es igual a cuando hacemos en forma nativa el session_start desde php */     
+        /* para enviar datos a la pagina podemos hacerlo por medio de arreglos */
+        $data = ['titulo' => 'Catalogo de Productos'];
+        /* para llamar a una vista colocamos la siguiente linea */
+        echo view('plantilla/header', $data) ;
+        echo view('productos/index', $data);
+        echo view('plantilla/footer', ['copy' => '2024']) ;
+        /* return view('productos/index', $data); */
     }
 
     public function show ($id) 
