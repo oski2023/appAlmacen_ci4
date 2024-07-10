@@ -4,18 +4,15 @@ namespace App\Controllers;
 /* luego se indica la clase que se va a utilizar */
 class Productos extends BaseController 
 {/* ahora se define una funcion regularmente tiene que ser publica para que se pueda acceder desde la url */
-    public function index ()
+    public function index () 
     {
-
         echo '<h1> Controller Productos</h1>';
-
+        print_r($this->session); /* este es igual a cuando hacemos en forma nativa el session_start desde php */     
     }
 
-    public function show ()
+    public function show () 
     {
-
         return '<h3>Detalles del Producto</h3>';
-
     }
 }
 
