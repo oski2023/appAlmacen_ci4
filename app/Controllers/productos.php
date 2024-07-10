@@ -10,9 +10,14 @@ class Productos extends BaseController
         print_r($this->session); /* este es igual a cuando hacemos en forma nativa el session_start desde php */     
     }
 
-    public function show () 
+    public function show ($id) 
     {
-        return '<h3>Detalles del Producto</h3>';
+        return '<h3>Detalles del Producto ' .$id. '</h3>';
+    }
+
+    public function cat ($categoria,$id) 
+    {
+        return '<h3>El nombre de la categoria es: ' .$categoria. '<br> Producto: ' .$id. '</h3>';
     }
 }
 
